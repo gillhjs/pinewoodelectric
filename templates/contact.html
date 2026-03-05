@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Contact | Pinewood Electrical Automation{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="container">
+    <h1>Start Your Electrical or Automation Project</h1>
+    <p>
+      Tell us about your requirements. Our team responds within 24–48 hours
+      with structured guidance and next steps.
+    </p>
+    <div class="contact-hero-trust">
+      <span>✔ Licensed & Insured</span>
+      <span>✔ Commercial & Industrial Specialists</span>
+      <span>✔ Code-Compliant Execution</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT LAYOUT -->
+<section class="contact-section">
+  <div class="container contact-grid">
+
+    <!-- LEFT INFO PANEL -->
+    <div class="contact-info">
+
+      <span class="section-label">Get In Touch</span>
+      <h2>Why Work With Us</h2>
+
+      <p style="margin-bottom: 2rem;">
+        We deliver structured electrical and automation solutions designed
+        for long-term reliability, safety compliance, and operational efficiency.
+      </p>
+
+      <div class="info-block">
+        <span>⚙</span>
+        <div>
+          <strong>Engineering-Led Approach</strong>
+          <p>Technical precision and structured system design.</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>🛡</span>
+        <div>
+          <strong>Safety &amp; Compliance First</strong>
+          <p>All installations meet current electrical code standards.</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>⏱</span>
+        <div>
+          <strong>Reliable Response Time</strong>
+          <p>Prompt communication and clear project timelines.</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>📍</span>
+        <div>
+          <strong>Head Office</strong>
+          <p>Pinewood Electrical and Automation Ltd.<br>
+             7358 148 Street, Surrey, BC, V3S 3E6</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>📞</span>
+        <div>
+          <strong>Phone</strong>
+          <p><a href="tel:7783870031" style="color:var(--amber);">(778) 387-0031</a></p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>📧</span>
+        <div>
+          <strong>Email</strong>
+          <p><a href="mailto:pinewoodelectric@hotmail.com" style="color:var(--amber);">pinewoodelectric@hotmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span>🕓</span>
+        <div>
+          <strong>Hours</strong>
+          <p>By appointment</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT FORM PANEL -->
+    <div class="contact-form-box">
+
+      <span class="section-label">New Project</span>
+      <h2 style="margin-bottom: 1.5rem;">Request Consultation</h2>
+
+      <form method="POST">
+        {% csrf_token %}
+
+        <div class="form-row">
+          <input type="text" name="full_name" placeholder="Full Name *" required>
+          <input type="text" name="company_name" placeholder="Company Name">
+        </div>
+
+        <div class="form-row">
+          <input type="text" name="phone" placeholder="Phone Number *" required>
+          <input type="email" name="email" placeholder="Email Address *" required>
+        </div>
+
+        <select name="service_type" required>
+          <option value="">Select Service Type *</option>
+          <option>Industrial Electrical</option>
+          <option>Automation & PLC Systems</option>
+          <option>Control Panel Design & Build</option>
+          <option>Electrical System Upgrades</option>
+          <option>Maintenance & Troubleshooting</option>
+          <option>Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Briefly describe your project requirements *" required></textarea>
+
+        <button type="submit" class="btn-primary" style="width:100%; margin-top: 1rem;">
+          Submit Project Inquiry →
+        </button>
+
+        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 0.75rem; text-align:center;">
+          We respect your time. No spam. No obligation.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL REASSURANCE SECTION -->
+<section class="services-cta">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <h2 style="margin-bottom:20px; color:white;">
+      Structured Solutions. Reliable Results.
+    </h2>
+    <p style="color:rgba(255,255,255,0.7); line-height:1.7;">
+      Pinewood Electrical Automation partners with commercial and industrial
+      clients to deliver engineered systems that perform safely and reliably.
+      Let's build a solution tailored to your facility.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

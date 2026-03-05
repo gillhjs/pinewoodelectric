@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Services | Pinewood Electrical Automation{% endblock %}
+
+{% block content %}
+
+<!-- HERO HEADER -->
+<section class="services-hero services-hero-bg">
+  <div class="container">
+    <h1>Industrial Electrical & Automation Systems Built for Performance</h1>
+    <p>
+      We design, integrate, and optimize electrical and control systems that reduce downtime,
+      improve operational efficiency, and ensure long-term reliability across commercial and industrial facilities.
+    </p>
+    <div class="services-hero-trust">
+      <span>✔ Commercial & Industrial Specialists</span>
+      <span>✔ Code-Compliant Installations</span>
+      <span>✔ Engineered for Long-Term Reliability</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO SECTION -->
+<section class="services-intro services-intro-bg">
+  <div class="container">
+
+    <div class="services-intro-grid">
+
+      <div class="services-intro-text">
+        <h2>End-to-End Automation & Electrical Expertise</h2>
+
+        <p>
+          From concept and system design to installation and commissioning,
+          we deliver fully integrated electrical and automation solutions
+          tailored to your facility's operational requirements.
+        </p>
+
+        <p>
+          Our focus is simple: maximize uptime, enhance safety, and build
+          systems engineered for long-term scalability and performance.
+        </p>
+      </div>
+
+      <div class="services-highlights">
+        <ul>
+          <li>PLC Programming, HMI Development & Integration</li>
+          <li>Custom Industrial Control Panel Design & Fabrication</li>
+          <li>Motor Controls & Variable Frequency Drives (VFD)</li>
+          <li>Electrical Infrastructure Upgrades & Retrofits</li>
+          <li>Automation Diagnostics & Downtime Reduction</li>
+          <li>Preventive Maintenance & System Optimization</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section class="services-list">
+  <div class="container">
+    <h2>Specialized Services</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 3rem auto; opacity:0.8;">
+      Each service is designed to enhance operational performance,
+      improve system reliability, and ensure compliance with industry standards.
+    </p>
+    <div class="services-grid-pro">
+      {% for service in services %}
+        <div class="service-card-pro">
+
+{% if service.slug == "automation-systems-plc-programming" %}
+  <img src="{% static 'main/images/industrial_panel.jpg' %}" class="service-card-img">
+{% elif service.slug == "control-panel-design-installation" %}
+  <img src="{% static 'main/images/wiring.jpg' %}" class="service-card-img">
+{% elif service.slug == "electrical-maintenance-services" %}
+  <img src="{% static 'main/images/technician.jpg' %}" class="service-card-img">
+{% elif service.slug == "electrical-system-upgrades-retrofits" %}
+  <img src="{% static 'main/images/commercial.jpg' %}" class="service-card-img">
+{% else %}
+  <img src="{% static 'main/images/industrial_panel.jpg' %}" class="service-card-img">
+{% endif %}
+
+  <h3>
+    <a href="{% url 'service_detail' service.slug %}">
+      {{ service.title }}
+    </a>
+  </h3>
+
+  <p>{{ service.short_description }}</p>
+
+  <a href="{% url 'service_detail' service.slug %}" class="learn-more">
+    View Service →
+  </a>
+
+</div>
+      {% empty %}
+        <p style="text-align:center; padding:40px;">
+          Service information is currently being updated. Please contact us directly for project inquiries.
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="services-process">
+  <div class="container">
+    <h2>Our Engineering Process</h2>
+    <div>
+      <div>
+        <h4>01</h4>
+        <p><strong>On-Site Assessment</strong><br>
+        We evaluate your existing systems, operational requirements, and safety standards.</p>
+      </div>
+      <div>
+        <h4>02</h4>
+        <p><strong>Custom System Design</strong><br>
+        Engineered solutions tailored to improve reliability, efficiency, and scalability.</p>
+      </div>
+      <div>
+        <h4>03</h4>
+        <p><strong>Professional Installation</strong><br>
+        Structured integration with minimal disruption to operations.</p>
+      </div>
+      <div>
+        <h4>04</h4>
+        <p><strong>Testing & Optimization</strong><br>
+        Commissioning, validation, and fine-tuning for long-term performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<<!-- WHY PARTNER -->
+<section class="section">
+  <div class="container why-partner-grid">
+
+    <div class="why-partner-image">
+      <img src="{% static 'main/images/technician.jpg' %}" alt="Electrical technician">
+    </div>
+
+    <div class="why-partner-content">
+
+      <h2>Why Partner With Pinewood Electrical Automation</h2>
+
+      <div class="why-point">
+        <h3>Engineering-Level Thinking</h3>
+        <p>We approach every project with structured technical analysis, not guesswork.</p>
+      </div>
+
+      <div class="why-point">
+        <h3>Reliability-Focused Solutions</h3>
+        <p>Our systems are designed to reduce downtime and prevent costly operational interruptions.</p>
+      </div>
+
+      <div class="why-point">
+        <h3>Safety & Compliance First</h3>
+        <p>All installations meet current electrical codes and industry best practices.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section section-soft">
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:3rem;">Industries We Serve</h2>
+    <div class="services-grid-pro">
+      <div class="service-card-pro">
+        <h3>Manufacturing Facilities</h3>
+        <p>Automation and electrical systems designed for high-demand production environments where uptime and precision are critical.</p>
+      </div>
+      <div class="service-card-pro">
+        <h3>Warehousing & Distribution</h3>
+        <p>Electrical infrastructure and automation support for distribution centers and material handling systems.</p>
+      </div>
+      <div class="service-card-pro">
+        <h3>Commercial & Institutional</h3>
+        <p>Code-compliant electrical installations and system upgrades for commercial and institutional facilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="section section-dark">
+  <div class="container text-center">
+    <h2 style="margin-bottom:2rem;">Built on Reliability</h2>
+    <div class="services-grid">
+      <div>
+        <h3>100+</h3>
+        <p>Projects Delivered</p>
+      </div>
+      <div>
+        <h3 style="white-space:nowrap;">Industrial Focus</h3>
+        <p>Commercial &amp; Manufacturing Facilities</p>
+      </div>
+      <div>
+        <h3 style="white-space:nowrap;">Code-Compliant</h3>
+        <p>Safety-First Installations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="services-cta">
+  <div class="container">
+    <h2>Let's Engineer a More Reliable System for Your Facility</h2>
+    <p>
+      Schedule a consultation to discuss your electrical or automation requirements.
+      Our team provides structured, performance-driven solutions tailored to your operations.
+    </p>
+    <a href="{% url 'contact' %}" class="btn-primary">Schedule Consultation</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About | Pinewood Electrical Automation{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="about-hero about-hero-bg">
+  <div class="container">
+    <div class="page-label">About Us</div>
+    <h1>Built on Engineering Discipline. Driven by Reliability.</h1>
+    <p>
+      Pinewood Electrical Automation delivers structured electrical and
+      industrial automation solutions engineered for performance,
+      safety, and long-term operational stability.
+    </p>
+  </div>
+</section>
+
+<!-- COMPANY OVERVIEW -->
+<section class="about-overview">
+  <div class="container about-grid-modern">
+
+    <div class="about-left">
+      <span class="section-label">Who We Are</span>
+      <h2>A Precision Engineering Firm Serving Industry</h2>
+      <p>
+        Pinewood Electrical and Automation Ltd. is a specialized electrical and
+        automation firm serving commercial and industrial facilities.
+        We focus on designing and implementing systems that reduce
+        downtime, improve efficiency, and ensure code-compliant execution.
+      </p>
+      <p>
+        Our approach is structured and methodical. Every project begins
+        with technical evaluation, followed by engineered system design,
+        precise installation, and thorough commissioning.
+        We do not believe in shortcuts — we believe in building systems
+        that perform reliably for years to come.
+      </p>
+      <p>
+        Whether upgrading electrical infrastructure, integrating PLC
+        systems, or designing custom control panels, our work is guided
+        by engineering standards and operational practicality.
+      </p>
+    </div>
+
+    <div class="about-image-wrap">
+      <img src="{% static 'main/images/about_photo.jpg' %}"
+           alt="Pinewood Electrical technician at work"
+           class="about-image">
+    </div>
+
+    <div class="about-right">
+      <div class="about-stat-box"><h3>15+</h3><p>Years Industry Experience</p></div>
+      <div class="about-stat-box"><h3>100+</h3><p>Projects Delivered</p></div>
+      <div class="about-stat-box"><h3>Industrial</h3><p>Commercial &amp; Manufacturing</p></div>
+      <div class="about-stat-box"><h3>100%</h3><p>Code-Compliant</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MISSION SECTION -->
+<section class="section section-soft">
+  <div class="container" style="max-width:900px; text-align:center;">
+    <span class="section-label" style="display:block; margin-bottom:0.75rem;">Our Purpose</span>
+    <h2>Our Mission</h2>
+    <p style="margin-top:1rem; font-size:1.05rem; line-height:1.7;">
+      To deliver dependable electrical and automation systems that enhance
+      operational reliability, protect facility investments, and support
+      long-term business growth. We aim to be a trusted engineering partner
+      for organizations that value structured execution and technical precision.
+    </p>
+  </div>
+</section>
+
+<!-- VALUES SECTION -->
+<section class="about-values">
+  <div class="container">
+    <span class="section-label" style="display:block; text-align:center; margin-bottom:0.75rem;">What Drives Us</span>
+    <h2>Our Core Principles</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">⚙</span>
+        <h3>Engineering Precision</h3>
+        <p>Every system is designed with technical accuracy, scalability, and long-term performance in mind.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">✔</span>
+        <h3>Operational Reliability</h3>
+        <p>We prioritize uptime and system stability to minimize costly operational disruptions.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🛡</span>
+        <h3>Safety &amp; Compliance</h3>
+        <p>Strict adherence to current electrical codes and industry best practices on every project.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🤝</span>
+        <h3>Professional Integrity</h3>
+        <p>Transparent communication, structured timelines, and dependable project delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CLIENTS TRUST US -->
+<section class="section section-soft">
+  <div class="container about-grid-modern">
+
+    <div class="about-image-wrap">
+      <img src="{% static 'main/images/technician.jpg' %}"
+           alt="Electrical technician inspecting equipment"
+           class="about-image">
+    </div>
+
+    <div>
+      <span class="section-label">Client Trust</span>
+      <h2>Why Clients Partner With Us</h2>
+      <p style="line-height:1.7;">
+        Our clients value structured execution, technical expertise,
+        and dependable performance. We combine practical field experience
+        with engineering-level thinking to ensure every project meets
+        operational goals, safety standards, and long-term expectations.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="container">
+    <h2>Partner With a Reliability-Focused Engineering Team</h2>
+    <p style="margin:1rem 0 2rem 0;">
+      Let's discuss how we can support your electrical or automation project.
+    </p>
+    <a href="{% url 'contact' %}" class="btn-primary">
+      Schedule a Consultation →
+    </a>
+  </div>
+</section>
+
+{% endblock %}

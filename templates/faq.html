@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}FAQ | Pinewood Electrical Automation{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container">
+    <div class="page-label">FAQ</div>
+    <h1>Frequently Asked Questions</h1>
+    <p>Answers to the most common questions about our electrical and automation services.</p>
+  </div>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="section">
+  <div class="container" style="max-width:860px;">
+
+    <span class="section-label">General</span>
+    <h2 style="margin-bottom:2.5rem;">About Our Services</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>Are you licensed and insured?</h3>
+        <p>Yes. Pinewood Electrical and Automation Ltd. is fully licensed and insured to operate in British Columbia. All work is performed to BC Electrical Code standards.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What areas do you serve?</h3>
+        <p>We serve Surrey, Langley, Delta, Burnaby, Vancouver, White Rock, and the broader Lower Mainland region.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you handle both residential and commercial projects?</h3>
+        <p>Yes. We work across residential, commercial, and industrial sectors — from home panel upgrades and EV charger installations to full industrial automation and control panel design.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I get a quote?</h3>
+        <p>Contact us via our <a href="{% url 'contact' %}" style="color:var(--amber);">contact form</a>, call us at <a href="tel:7783870031" style="color:var(--amber);">(778) 387-0031</a>, or email <a href="mailto:pinewoodelectric@hotmail.com" style="color:var(--amber);">pinewoodelectric@hotmail.com</a>. We typically respond within 24–48 hours.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you offer emergency services?</h3>
+        <p>Yes. Emergency electrical service is available on request. Contact us directly by phone for urgent situations.</p>
+      </div>
+
+    </div>
+
+    <span class="section-label" style="margin-top:4rem; display:block;">Pricing & Process</span>
+    <h2 style="margin-bottom:2.5rem;">Pricing & How We Work</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>Are your prices transparent?</h3>
+        <p>Yes. We provide honest, upfront quotes with no hidden fees. You'll know the scope and cost before any work begins.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you pull permits?</h3>
+        <p>Yes. All work requiring permits is properly permitted and inspected. This protects your home, your insurance, and ensures code compliance.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does a typical project take?</h3>
+        <p>It depends on the scope. A panel upgrade or EV charger installation is typically completed in one day. Larger commercial or automation projects are scoped and scheduled individually.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you clean up after the job?</h3>
+        <p>Absolutely. We follow a strict "leave-it-clean" policy — every project is finished the way we'd want it done in our own home.</p>
+      </div>
+
+    </div>
+
+    <span class="section-label" style="margin-top:4rem; display:block;">Automation & Industrial</span>
+    <h2 style="margin-bottom:2.5rem;">Automation Services</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>What automation services do you offer?</h3>
+        <p>We offer PLC programming, HMI development, control panel design and fabrication, motor controls, VFD installation, and full system integration and commissioning.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you work with our existing equipment?</h3>
+        <p>Yes. We assess your existing systems first and design solutions that integrate with your current infrastructure wherever possible, minimizing replacement costs.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you provide ongoing maintenance?</h3>
+        <p>Yes. We offer preventive maintenance, system diagnostics, and ongoing optimization support to keep your systems running reliably.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="services-cta">
+  <div class="container" style="max-width:700px; text-align:center;">
+    <h2 style="color:white;">Still Have Questions?</h2>
+    <p>Call us or send a message — we're happy to help before you commit to anything.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
+      <a href="{% url 'contact' %}" class="btn-primary">Contact Us</a>
+      <a href="tel:7783870031" class="btn-secondary">📞 (778) 387-0031</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
